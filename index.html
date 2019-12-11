@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG Animation</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      place-content: center;
+      place-items: center;
+    }
+
+    .animal {
+      height: 80%;
+    }
+
+    .animal svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="animal">
+    <svg version="1.1" id="fox" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 179.9 185.4" xml:space="preserve">
+      <style type="text/css">
+        .st0 {
+          opacity: 0.1;
+          fill: #7B4239;
+        }
+
+        .st1 {
+          fill: #CE6F49;
+        }
+
+        .st2 {
+          fill: #7B4239;
+        }
+
+        .st3 {
+          fill: #DA7D52;
+        }
+
+        .st4 {
+          fill: #F2C9A0;
+        }
+
+
+        #shadow {
+          transform-origin: 86.3px 160.3px;
+        }
+
+        #tail {
+          transform-origin: 85.7px 117.1px;
+          animation: tailWag 3s cubic-bezier(.46, .03, .52, .96) infinite alternate both;
+        }
+
+        @keyframes tailWag {
+          from {
+            transform: rotate(10deg);
+          }
+
+          to {
+            transform: rotate(-5deg);
+          }
+        }
+
+        #leg-left {
+          transform-origin: 64px 120px;
+        }
+
+        #leg-right {
+          transform-origin: 119px 120px;
+        }
+
+        #body {
+          transform-origin: 85.7px 117.1px;
+        }
+
+        #arm-left {
+          transform-origin: 77.2px 84.7px;
+          animation: beg-left 16s infinite both;
+        }
+
+        #arm-right {
+          transform-origin: 94.2px 84.7px;
+          animation: beg-right 16s infinite both;
+        }
+
+        @keyframes beg-left {
+          0%, 34% {
+            transform: rotate(0) scaleX(1) scaleY(1);
+          }
+
+          39%, 53% {
+            transform: rotate(-10deg) scaleX(0.9) scaleY(0.5);
+          }
+
+          55%, 86% {
+            transform: rotate(0) scaleX(1) scaleY(1);
+          }
+
+          87% {
+            transform: rotate(0) scaleX(1) scaleY(0.95);
+          }
+
+          88% {
+            transform: rotate(0) scaleX(1) scaleY(1);
+          }
+
+          89% {
+            transform: rotate(0) scaleX(1) scaleY(0.95);
+          }
+
+          90%, 100% {
+            transform: rotate(0) scaleX(1) scaleY(1);
+          }
+        }
+
+        @keyframes beg-right {
+          0%, 35% {
+            transform: rotate(0) scaleX(1) scaleY(1);
+          }
+
+          38%, 52% {
+            transform: rotate(10deg) scaleX(0.9) scaleY(0.5);
+          }
+
+          55%, 85% {
+            transform: rotate(0) scaleX(1) scaleY(1);
+          }
+
+          86% {
+            transform: rotate(0) scaleX(1) scaleY(0.95);
+          }
+
+          87% {
+            transform: rotate(0) scaleX(1) scaleY(1);
+          }
+
+          88% {
+            transform: rotate(0) scaleX(1) scaleY(0.95);
+          }
+
+          89%, 100% {
+            transform: rotate(0) scaleX(1) scaleY(1);
+          }
+        }
+
+        #head {
+          transform-origin: 86.5px 96.2px;
+        }
+
+        #ear-left {
+          transform-origin: 71.5px 71.2px;
+          animation: earTwitch-left 8s ease infinite both;
+        }
+
+        #ear-right {
+          transform-origin: 101.5px 71.2px;
+          animation: earTwitch-right 8s ease infinite both;
+        }
+
+        @keyframes earTwitch-left {
+          0%, 5% {
+            transform: rotate(-0deg)
+          }
+
+          9% {
+            transform: rotate(-18deg)
+          }
+
+          12% {
+            transform: rotate(-13deg)
+          }
+
+          15%, 70% {
+            transform: rotate(-15deg)
+          }
+
+          75% {
+            transform: rotate(5deg)
+          }
+
+          78%,
+          100% {
+            transform: rotate(0deg)
+          }
+        }
+
+        @keyframes earTwitch-right {
+          0%, 5% {
+            transform: rotate(0deg)
+          }
+
+          9% {
+            transform: rotate(18deg)
+          }
+
+          12% {
+            transform: rotate(13deg)
+          }
+
+          15%, 70% {
+            transform: rotate(15deg)
+          }
+
+          75% {
+            transform: rotate(-5deg)
+          }
+
+          78%,
+          100% {
+            transform: rotate(0deg)
+          }
+        }
+
+        #eye-left {
+          transform-origin: 75.2px 66.5px;
+        }
+
+
+        #eye-right {
+          transform-origin: 97.6px 66.5px;
+        }
+
+        #eye-left,
+        #eye-right {
+          animation: blinkingEyes 6s ease infinite both;
+        }
+
+        @keyframes blinkingEyes {
+          0% {
+            transform: scaleY(1)
+          }
+
+          2% {
+            transform: scaleY(0.2)
+          }
+
+          4%,
+          50% {
+            transform: scaleY(1)
+          }
+
+          51% {
+            transform: scaleY(0.2)
+          }
+
+          52% {
+            transform: scaleY(1)
+          }
+
+          53% {
+            transform: scaleY(0.2)
+          }
+
+          55%,
+          100% {
+            transform: scaleY(1)
+          }
+        }
+
+        #nose {
+          transform-origin: 85.7px 80.3px;
+        }
+      </style>
+      <title>Fox</title>
+      <path id="shadow" class="st0" d="M143.2,160.3c0,5.2-25.5,9.5-56.9,9.5s-57-4.3-57-9.5s25.5-9.5,57-9.5S143.2,155.1,143.2,160.3z" />
+      <g id="tail">
+        <path class="st1" d="M70.9,99.8c20.5,11.8,31.9,0.2,35.1-14.5c3.8-17.2-5.4-35.6,1.4-52.3c5.3-12.3,25.4-21.5,42.6-15.3
+		c-14,2.4-1.2,36.6,0,45.2c2.8,19.4-4.5,40.2-16.7,53.9c-5.7,6.2-13.4,9-22.3,11.2C96.3,131.6,79.9,115.4,70.9,99.8z" />
+        <path class="st2" d="M117,34.3c-5.2,5.6-7.2,22.6-7.2,22.6c-7.6-16.6,1-29.2,1-29.3c8-9.4,24.6-15.2,39.2-9.9
+		c-14,2.4-1.2,36.6,0,45.2c0.7,5.1,0.8,10.3,0.2,15.4c-2.3-7.2-5.8-14-10.3-20c-1.5,9.6-4.3,19.1-8.2,28
+		c-4.6-10.1-3.8-41.2-3.8-41.2c-2.6,4.9-8.9,23.1-8.9,23.1C114.8,53,117,34.3,117,34.3z" />
+      </g>
+      <g id="leg-left">
+        <path class="st3" d="M72,104.7c-8.5-0.3-24.9,3.8-28.8,14.9s9,40.2,17.4,40.4s16-23.6,19.8-34.7C84.2,114.2,80.5,104.9,72,104.7z" />
+        <path class="st3" d="M54.1,160.3c-10.6-1.1-18.8-7.6-18.1-14.6c0.7-7,12.4-13.2,23-12.1s16.2,8.9,15.5,15.9
+		C73.8,156.5,64.8,161.3,54.1,160.3z" />
+      </g>
+      <g id="leg-right">
+        <path class="st3" d="M99.4,104.7c8.4-0.3,24.9,3.8,28.7,14.9c3.8,11.1-8.9,40.2-17.4,40.4s-16-23.6-19.8-34.7
+		S90.9,104.9,99.4,104.7z" />
+        <path class="st3" d="M117.2,160.3c10.7-1.1,18.8-7.6,18.2-14.6s-12.4-13.2-23.1-12.1s-16.1,8.9-15.5,15.9S106.6,161.3,117.2,160.3z
+		" />
+      </g>
+      <g id="body">
+        <path class="st3" d="M121,124.7c0,24.4-15.9,36.6-35.4,36.6s-35.3-12.2-35.3-36.6S66.1,73,85.6,73S121,100.2,121,124.7z" />
+        <path class="st4" d="M108.2,127.9c0,16.7-10.1,25.2-22.6,25.2S63,144.6,63,127.9s10.1-21.1,22.6-21.1S108.2,111.1,108.2,127.9z" />
+      </g>
+      <g id="arm-left">
+        <path class="st3" d="M80.8,132.5c-4.2,22-12,33.1-18.7,31.7s-9.9-14.8-5.7-36.8s14-44,20.8-42.6C84,86.2,85,110.6,80.8,132.5z" />
+        <path class="st2" d="M54.5,145.1c0,11.4,2.9,18.1,7.6,19.1s11.4-5.7,15.7-19.5C69.7,142.1,61,143.3,54.5,145.1z" />
+      </g>
+      <g id="arm-right">
+        <path class="st3" d="M90.5,132.5c4.1,22,12,33.1,18.7,31.7s9.9-14.8,5.7-36.8s-14-44-20.8-42.6S86.3,110.6,90.5,132.5z" />
+        <path class="st2" d="M116.8,145.1c0,11.4-2.9,18.1-7.6,19.1s-11.4-5.7-15.7-19.5C101.6,142.1,110.3,143.3,116.8,145.1z" />
+      </g>
+      <g id="head">
+        <g id="ear-right">
+          <path class="st3" d="M124.6,61.1c-6.1,10.2-16.9,15-24,10.7s-8-16-1.9-26.1s24-10.8,24-10.8S130.7,50.9,124.6,61.1z" />
+          <path class="st4" d="M118.9,62.9c-4.6,7.7-12.6,11.3-18,8.1s-6-12.1-1.4-19.8s18-8.1,18-8.1S123.5,55.2,118.9,62.9z" />
+        </g>
+        <g id="ear-left">
+          <path class="st3" d="M47.5,61.1c6.1,10.2,16.9,15,24,10.7c7.1-4.3,8-16,1.9-26.1s-24-10.8-24-10.8S41.4,50.9,47.5,61.1z" />
+          <path class="st4" d="M53.2,62.9c4.6,7.7,12.7,11.3,18,8.1c5.3-3.2,6-12.1,1.4-19.8s-18-8.1-18-8.1S48.6,55.2,53.2,62.9z" />
+        </g>
+        <g id="face">
+          <path class="st3" d="M86.5,101.2C53.2,101.2,34.4,65,34.4,65c2.9,2.2,13.3,3.3,26.1-10.9s26-12.6,26-12.6s13.2-1.5,25.9,12.6
+			s23.3,13.1,26.1,10.9C138.5,65,119.7,101.2,86.5,101.2z" />
+          <path class="st4" d="M85.6,80.3C75.7,69,55.5,74.6,44.2,79c8.7,10.2,23.1,22.2,42.3,22.2s33-11.7,41.8-21.8
+			C117.4,75,95.9,68.5,85.6,80.3z" />
+        </g>
+        <g id="eye-right">
+          <path class="st2" d="M100.3,66.2c0.1,1.5-1.1,2.7-2.6,2.8c-1.5,0.1-2.7-1.1-2.8-2.6c-0.1-1.5,1.1-2.7,2.6-2.8c0,0,0.1,0,0.1,0
+			C99.1,63.6,100.3,64.7,100.3,66.2z" />
+        </g>
+        <g id="eye-left">
+          <path class="st2" d="M77.9,66.5c0,1.5-1.1,2.7-2.6,2.8c-1.5,0.1-2.7-1.1-2.8-2.6c-0.1-1.5,1.1-2.7,2.6-2.8
+			C76.6,63.8,77.9,65,77.9,66.5z" />
+        </g>
+        <g id="nose">
+          <path class="st2" d="M85.6,76c4.6-0.1,7.1,2,5.8,5c-1,2.2-3.2,3.7-5.7,3.7c-2.4,0.1-4.7-1.2-5.7-3.4C78.6,78.2,80.9,76.1,85.6,76z
+			" />
+        </g>
+      </g>
+    </svg>
+  </div>
+
+</body>
+
+</html>
